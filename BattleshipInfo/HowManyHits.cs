@@ -6,8 +6,20 @@ using System.Threading.Tasks;
 
 namespace BattleshipInfo
 {
-    class Hits
+    class HowManyHits
     {
+        private object howManyHits;
+
+        public object GetHowManyHits()
+        {
+            return howManyHits;
+        }
+
+        internal void SetHowManyHits(object value)
+        {
+            howManyHits = value;
+        }
+
         public static void Main()
         {
             // TODO Declare a boolean variable named "keepGoing"

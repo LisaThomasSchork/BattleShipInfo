@@ -12,12 +12,8 @@ namespace BattleshipInfo
         {
             var searchParameters = new ShipInfo
             {
-                Size = "Medium",
-                Country = "United States",
-                Color = new List<string> { "White", "Brown", "Black" },
-                Page = 0,
-                PageSize = 5
-            };
+               
+            }
             Console.WriteLine("Type any key to begin search");
             var ships = ShipInfo.LoadSips();
 
