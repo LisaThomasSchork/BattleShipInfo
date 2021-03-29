@@ -1,0 +1,7 @@
+C:\Users\Student\source\repos\BattleshipInfo\BattleshipInfo\bin\Debug\BattleshipInfo.exe.config
+C:\Users\Student\source\repos\BattleshipInfo\BattleshipInfo\bin\Debug\BattleshipInfo.exe
+C:\Users\Student\source\repos\BattleshipInfo\BattleshipInfo\bin\Debug\BattleshipInfo.pdb
+C:\Users\Student\source\repos\BattleshipInfo\BattleshipInfo\obj\Debug\BattleshipInfo.csprojAssemblyReference.cache
+C:\Users\Student\source\repos\BattleshipInfo\BattleshipInfo\obj\Debug\BattleshipInfo.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\BattleshipInfo\BattleshipInfo\obj\Debug\BattleshipInfo.exe
+C:\Users\Student\source\repos\BattleshipInfo\BattleshipInfo\obj\Debug\BattleshipInfo.pdb
