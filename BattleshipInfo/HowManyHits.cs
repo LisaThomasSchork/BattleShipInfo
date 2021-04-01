@@ -1,79 +1,52 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BattleshipInfo
 {
     class HowManyHits
     {
-        private object howManyHits;
-
-        public object GetHowManyHits()
-        {
-            return howManyHits;
-        }
-
-        internal void SetHowManyHits(object value)
-        {
-            howManyHits = value;
-        }
-
         public static void Main()
         {
-            // TODO Declare a boolean variable named "keepGoing"
-            // and assign it a value of "true". Use this variable to 
-            // know when to exit the while loop.
+            // TODO Switch to using "continue" and "break" 
+            // to control the flow of execution through the program.            
             bool keepGoing = true;
 
-            // TODO Define a while loop.
-            // Keep looping as long as the variable "keepGoing" has a value of "true".
             while (keepGoing)
             {
-                // TODO Prompt the user with the text "Enter a number:" 
-                // and assign their value to an "entry" string variable.
+                // TODO Update the text "Enter a number: " to 
+                // "Enter a number between 1 and 1000: ".
                 Console.Write("Enter a number: ");
                 string entry = Console.ReadLine();
 
-                // TODO If the user entered the text "quit"...
+                // TODO Force the user's provided value for the "entry" variable 
+                // to lowercase letters so the user can type the text "quit"
+                // in any of the possible formats.
                 if (entry == "quit")
                 {
-                    // TODO Exit the program.
                     keepGoing = false;
                 }
-
-                // TODO Else the user didn't enter the text "quit"...
                 else
                 {
-                    // TODO Parse the user's entry to an integer
+                    // TODO Add a try/catch statement to catch FormatException exceptions.
+                    // Handle FormatException exceptions by displaying the text 
+                    // "'[user's entry value]' is not a number!"
+
+                    // TODO Allow the user to enter a fractional value.
                     int number = int.Parse(entry);
 
-                    // TODO Square the user's provided number 
-                    // (i.e. multiply the number by itself).
-                    int result = number * number;
+                    // TODO If the user enters a value less than or equal to "0"
+                    // then display the message 
+                    // "Please enter a number greater than '0'."
 
-                    // TODO Output the result.
-                    // Example: "The square of 2 is 4." or 
-                    // "2 multiplied by itself is equal to 4." 
-                    Console.WriteLine(number + " multiplied by itself if equal to " + result + ".");
+                    // TODO If the user enters a value greater than "1000"
+                    // then display the message 
+                    // "Please enter a number less than or equal to '1000'."
+
+                    int result = number * number;
+                    Console.WriteLine(number + " multiplied by itself is equal to " + result + ".");
                 }
             }
 
-            // TODO Output the text "Goodbye!" after exiting the loop.
             Console.WriteLine("Goodbye!");
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

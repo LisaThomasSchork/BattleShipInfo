@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 
-public class ShipInfo : IEquatable<HowManyHits>
+namespace BattleshipInfo
+{
+    public class ShipInfo : IEquatable<HowManyHits>
 {
     public string VesalNames { get; set; }
 
@@ -31,7 +33,7 @@ public class ShipInfo : IEquatable<HowManyHits>
     }
     // Should also override == and != operators.
 }
-public class Example
+    public class Example
 {
     private static readonly bool HowManyHits;
 
@@ -41,11 +43,11 @@ public class Example
         List<Ships> ships = new List<Ships>();
 
         // Add parts to the list.
-        ships.Add(new Ships { VesalNames = "Carrier", HowManyHits = 5 });
-        ships.Add(new Ships { VesalNames = "BattleShip", HowManyHits = 4 });
-        ships.Add(new Ships { VesalNames = "Cruiser", HowManyHits = 3 });
-        ships.Add(new Ships { VesalNames = "Submarine", HowManyHits = 3 });
-        ships.Add(new Ships { VesalNames = "Distroyer", HowManyHits = 2 });
+        ships.Add(new Ships { VesalNames = "Carrier", HowManyHits = "5" });
+        ships.Add(new Ships { VesalNames = "BattleShip", HowManyHits = "4" });
+        ships.Add(new Ships { VesalNames = "Cruiser", HowManyHits = "3" });
+        ships.Add(new Ships { VesalNames = "Submarine", HowManyHits = "3" });
+        ships.Add(new Ships { VesalNames = "Distroyer", HowManyHits = "2" });
 
         // Write out the ships in the list. This will call the overridden ToString method
         // in the ships class.
@@ -55,4 +57,5 @@ public class Example
             Console.WriteLine(HowManyHits);
         }
     }
+}
 }

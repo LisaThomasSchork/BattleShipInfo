@@ -10,17 +10,21 @@ namespace BattleshipInfo
     {
         public static void Main(string[] args)
         {
-            var searchParameters = new ShipInfo
+            var searchParameters = new BirdSearch
             {
-               
-            }
+                Size = "Medium",
+                Country = "United States",
+                Color = new List<string> { "White", "Brown", "Black" },
+                Page = 0,
+                PageSize = 5
+            };
             Console.WriteLine("Type any key to begin search");
-            var ships = ShipInfo.LoadSips();
+            var birds = BirdRepository.LoadBirds();
 
             while (Console.ReadKey().KeyChar != 'q')
             {
                 Console.WriteLine($"Page: {searchParameters.Page}");
-                ships.Search(searchParameters).ToList().ForEach(b =>
+                birds.Search(searchParameters).ToList().ForEach(b =>
                 {
                     Console.WriteLine($"Common Name: {b.CommonName}");
                 });
