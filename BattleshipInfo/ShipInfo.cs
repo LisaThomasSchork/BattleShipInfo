@@ -41,7 +41,12 @@ namespace BattleshipInfo
             return this.HowManyHits.Equals(other.HowManyMisses());
         }
 
-        
+        internal static object HowManyHits()
+        {
+            throw new NotImplementedException();
+        }
+
+
         // Should also override == and != operators.
 
 

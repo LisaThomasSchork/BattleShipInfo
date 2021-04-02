@@ -12,48 +12,45 @@ namespace BattleshipInfo
         {
 
             // Create a list of ships.
-            List<Ships> ships = new List<Ships>();
+            List<Ships> ships = new List<Ships>
+            {
 
-            // Add parts to the list.
-            ships.Add(new Ships { VesalNames = "Carrier", HowManyHits = "5" });
-            ships.Add(new Ships { VesalNames = "BattleShip", HowManyHits = "4" });
-            ships.Add(new Ships { VesalNames = "Cruiser", HowManyHits = "3" });
-            ships.Add(new Ships { VesalNames = "Submarine", HowManyHits = "3" });
-            ships.Add(new Ships { VesalNames = "Distroyer", HowManyHits = "2" });
+                // Add parts to the list.
+                new Ships { VesalNames = "Carrier", HowManyHits = "5" },
+                new Ships { VesalNames = "BattleShip", HowManyHits = "4" },
+                new Ships { VesalNames = "Cruiser", HowManyHits = "3" },
+                new Ships { VesalNames = "Submarine", HowManyHits = "3" },
+                new Ships { VesalNames = "Distroyer", HowManyHits = "2" }
+            };
 
             // Write out the ships in the list. This will call the overridden ToString method
             // in the ships class.
             Console.WriteLine();
-            foreach (Ships aPart in ships)
-            {
-                Console.WriteLine(HowManyHits);
-            }
 
-
-
-
-
-            var searchParameters = new BirdSearch
-            {
-                Size = "Medium",
-                Country = "United States",
-                Color = new List<string> { "White", "Brown", "Black" },
-                Page = 0,
-                PageSize = 5
-            };
+            var searchParameters = GetSearchParameters();
             Console.WriteLine("Type any key to begin search");
-            var birds = BirdRepository.LoadBirds();
+            var Ships = ShipInfo.();
 
             while (Console.ReadKey().KeyChar != 'q')
             {
                 Console.WriteLine($"Page: {searchParameters.Page}");
-                birds.Search(searchParameters).ToList().ForEach(b =>
+                Ships.Search(searchParameters).ToList().ForEach(b =>
                 {
-                    Console.WriteLine($"Common Name: {b.CommonName}");
+                    Console.WriteLine($"Vesal Name: {b.VesalNames}");
                 });
 
                 searchParameters.Page++;
             }
+        }
+
+        private static ShipSearch GetSearchParameters()
+        {
+            return new ShipSearch
+            {
+                VesalNames = "Ships Name",
+                HowManyHits = "How Many Hits",
+                Page = 0,
+            };
         }
     }
 }
