@@ -48,5 +48,10 @@ namespace BattleshipInfo
 
             Console.WriteLine("Goodbye!");
         }
+
+        internal object HowManyMisses()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

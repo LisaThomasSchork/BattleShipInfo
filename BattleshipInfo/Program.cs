@@ -10,6 +10,29 @@ namespace BattleshipInfo
     {
         public static void Main(string[] args)
         {
+
+            // Create a list of ships.
+            List<Ships> ships = new List<Ships>();
+
+            // Add parts to the list.
+            ships.Add(new Ships { VesalNames = "Carrier", HowManyHits = "5" });
+            ships.Add(new Ships { VesalNames = "BattleShip", HowManyHits = "4" });
+            ships.Add(new Ships { VesalNames = "Cruiser", HowManyHits = "3" });
+            ships.Add(new Ships { VesalNames = "Submarine", HowManyHits = "3" });
+            ships.Add(new Ships { VesalNames = "Distroyer", HowManyHits = "2" });
+
+            // Write out the ships in the list. This will call the overridden ToString method
+            // in the ships class.
+            Console.WriteLine();
+            foreach (Ships aPart in ships)
+            {
+                Console.WriteLine(HowManyHits);
+            }
+
+
+
+
+
             var searchParameters = new BirdSearch
             {
                 Size = "Medium",
