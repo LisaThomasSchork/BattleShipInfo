@@ -29,18 +29,24 @@ namespace BattleshipInfo
 
             var searchParameters = GetSearchParameters();
             Console.WriteLine("Type any key to begin search");
-            var Ships = ShipInfo.();
+            object Ships = ShipInfo.HowManyHits();
 
             while (Console.ReadKey().KeyChar != 'q')
             {
                 Console.WriteLine($"Page: {searchParameters.Page}");
-                Ships.Search(searchParameters).ToList().ForEach(b =>
+                object ships1 = Ships;
+                GetShips1(ships1).Search(searchParameters).ToList().ForEach(b =>
                 {
                     Console.WriteLine($"Vesal Name: {b.VesalNames}");
                 });
 
                 searchParameters.Page++;
             }
+        }
+
+        private static object GetShips1(object ships1)
+        {
+            return ships1;
         }
 
         private static ShipSearch GetSearchParameters()

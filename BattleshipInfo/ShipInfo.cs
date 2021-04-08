@@ -8,13 +8,11 @@ namespace BattleshipInfo
     {
         public string VesalNames { get; set; }
         public object HowManyHits { get; private set; }
-        public object HowManyMisses { get; private set; }
 
 
 
-        public ShipInfo(object howManyMisses, object howManyHits)
+        public ShipInfo(object howManyHits)
         {
-            HowManyMisses = howManyMisses;
             HowManyHits = howManyHits;
         }
 
@@ -25,31 +23,10 @@ namespace BattleshipInfo
         public override bool Equals(object obj)
         {
             if (obj == null) return false;
-            HowManyHits objAsHowManyMisses = obj as HowManyHits;
-            if (objAsHowManyMisses == null) return false;
-            else return ((IEquatable<HowManyHits>)this).Equals(objAsHowManyMisses);
+            HowManyHits objAsHowManyHits = obj as HowManyHits;
+            if (objAsHowManyHits == null) return false;
+            else return ((IEquatable<HowManyHits>)this).Equals(objAsHowManyHits);
         }
-
-        public override int GetHashCode()
-        {
-            return (int)HowManyHits;
-        }
-
-        bool IEquatable<HowManyHits>.Equals(HowManyHits other)
-        {
-            if (other == null) return false;
-            return this.HowManyHits.Equals(other.HowManyMisses());
-        }
-
-        internal static object HowManyHits()
-        {
-            throw new NotImplementedException();
-        }
-
-
-        // Should also override == and != operators.
-
-
 
     }
 }
