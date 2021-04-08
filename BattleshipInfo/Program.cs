@@ -35,18 +35,13 @@ namespace BattleshipInfo
             {
                 Console.WriteLine($"Page: {searchParameters.Page}");
                 object ships1 = Ships;
-                GetShips1(ships1).Search(searchParameters).ToList().ForEach(b =>
+                ships1.Search(searchParameters).ToList().ForEach(b =>
                 {
                     Console.WriteLine($"Vesal Name: {b.VesalNames}");
                 });
 
                 searchParameters.Page++;
             }
-        }
-
-        private static object GetShips1(object ships1)
-        {
-            return ships1;
         }
 
         private static ShipSearch GetSearchParameters()
