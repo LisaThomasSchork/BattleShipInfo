@@ -28,5 +28,14 @@ namespace BattleshipInfo
             else return ((IEquatable<HowManyHits>)this).Equals(objAsHowManyHits);
         }
 
+        bool IEquatable<HowManyHits>.Equals(HowManyHits other)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }

@@ -29,9 +29,9 @@ namespace BattleshipInfo
 
             var searchParameters = GetSearchParameters();
             Console.WriteLine("Type any key to begin search");
-            object Ships = ShipInfo.HowManyHits();
+            //object Ships = ShipInfo.HowManyHits();
 
-            while (Console.ReadKey().KeyChar != 'q')
+      /*      while (Console.ReadKey().KeyChar != 'q')
             {
                 Console.WriteLine($"Page: {searchParameters.Page}");
                 object ships1 = Ships;
@@ -41,7 +41,7 @@ namespace BattleshipInfo
                 });
 
                 searchParameters.Page++;
-            }
+            }*/
         }
 
         private static ShipSearch GetSearchParameters()
